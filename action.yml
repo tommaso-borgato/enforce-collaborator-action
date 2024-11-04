@@ -1,5 +1,8 @@
 name: 'enforce-collaborator-action'
 description: 'Enforces current workflow to be run by repo collaborator'
+branding:
+  icon: stop-circle
+  color: red
 inputs:
   github_token:  
     description: 'github token'
