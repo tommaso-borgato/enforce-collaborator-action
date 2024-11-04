@@ -1,12 +1,12 @@
-name: 'actions-enforce-maintainer'
-description: 'Enforces current workflow to be run by repo maintainer'
+name: 'enforce-collaborator-action'
+description: 'Enforces current workflow to be run by repo collaborator'
 inputs:
   github_token:  
     description: 'github token'
     required: true
 outputs:
-  is-maintainer: 
-    description: 'Is the current user a repo maintainer'
+  is-collaborator: 
+    description: 'Is the current user a repo collaborator'
 runs:
   using: 'node20'
   main: 'dist/index.js'
