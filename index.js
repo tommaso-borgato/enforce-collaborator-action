@@ -28,15 +28,16 @@ try {
     });
     console.log(`collaborators: ${JSON.stringify(collaborators, undefined, 2)}`);
 
-    var isCollaborator = false;
+    var isCollaborator = 'false';
     collaborators.data.forEach(element => {
         if (element.login == login) {
-            isCollaborator = true;
+            isCollaborator = 'true';
         }
     });
     console.log(`Is Collaborator: ${isCollaborator}`);
-    core.setOutput("is-maintainer", isCollaborator);
+    core.setOutput("is_collaborator", isCollaborator);
 } catch (error) {
-    core.setOutput("is-maintainer", false);
+    console.log(`Error: ${error}`);
+    core.setOutput("is_collaborator", 'false');
     core.setFailed(error.message);
 }

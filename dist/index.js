@@ -41,16 +41,17 @@ try {
     });
     console.log(`collaborators: ${JSON.stringify(collaborators, undefined, 2)}`);
 
-    var isCollaborator = false;
+    var isCollaborator = 'false';
     collaborators.data.forEach(element => {
         if (element.login == login) {
-            isCollaborator = true;
+            isCollaborator = 'true';
         }
     });
     console.log(`Is Collaborator: ${isCollaborator}`);
-    _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput("is-maintainer", isCollaborator);
+    _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput("is_collaborator", isCollaborator);
 } catch (error) {
-    _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput("is-maintainer", false);
+    console.log(`Error: ${error}`);
+    _actions_core__WEBPACK_IMPORTED_MODULE_0__.setOutput("is_collaborator", 'false');
     _actions_core__WEBPACK_IMPORTED_MODULE_0__.setFailed(error.message);
 }
 

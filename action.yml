@@ -8,7 +8,7 @@ inputs:
     description: 'github token'
     required: true
 outputs:
-  is-collaborator: 
+  is_collaborator: 
     description: 'Is the current user a repo collaborator'
 runs:
   using: 'node20'

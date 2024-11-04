@@ -11,4 +11,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Get the output
-        run: 'echo "Is collaborator: ${{ steps.enforce-collaborator-action.outputs.is-collaborator }}"'
+        run: 'echo "Is collaborator: ${{ steps.enforce-collaborator-action.outputs.is_collaborator }}"'
